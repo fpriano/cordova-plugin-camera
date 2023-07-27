@@ -1314,10 +1314,11 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
     public void onRequestPermissionResult(int requestCode, String[] permissions,
                                           int[] grantResults) {
         for (int r : grantResults) {
-            if (r == PackageManager.PERMISSION_DENIED) {
+              System.out.println("PHOTO DEBUG - " + r);
+            /*if (r == PackageManager.PERMISSION_DENIED) {
                 this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, PERMISSION_DENIED_ERROR));
                 return;
-            }
+            }*/
         }
         switch (requestCode) {
             case TAKE_PIC_SEC:
